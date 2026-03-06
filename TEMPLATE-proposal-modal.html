@@ -1,0 +1,272 @@
+<!--
+================================================================
+PROPOSAL MODAL TEMPLATE
+================================================================
+For future client website proposals.
+Copy this code into your HTML file before </body> tag.
+
+INSTRUCTIONS:
+1. Replace [CLIENT_NAME] with client's first name
+2. Replace [BUSINESS_NAME] with their business name  
+3. Replace [DOMAIN] with their domain (e.g., clientbusiness.com)
+4. Adjust pricing as needed
+5. Add the "Show modal on page load" script to your existing <script> section
+
+To enable the popup, add this to your page's JavaScript:
+    window.addEventListener('load', function() {
+        document.getElementById('proposalModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+================================================================
+-->
+
+<!-- Proposal Modal JavaScript (add to your existing script section) -->
+<script>
+    function closeProposalModal() {
+        document.getElementById('proposalModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+</script>
+
+<!-- Proposal Modal HTML -->
+<div id="proposalModal" class="proposal-modal">
+    <div class="proposal-content">
+        <button class="proposal-close" onclick="closeProposalModal()">&times;</button>
+        
+        <h1 class="proposal-title">Hello [CLIENT_NAME],</h1>
+        
+        <p class="proposal-intro">I created this website as a proposal for [BUSINESS_NAME], so you can see what's possible before making any decision.</p>
+        
+        <h2 class="proposal-section-title">What makes this different</h2>
+        
+        <ul class="proposal-list">
+            <li><strong>Custom-made, no templates</strong> - built specifically for [BUSINESS_NAME]'s vision and atmosphere</li>
+            <li><strong>Flexible updates included</strong> - menu changes, price updates, small text edits, no problem</li>
+            <li><strong>📍 Google Maps visibility</strong> - so locals, tourists, and expats can discover you</li>
+        </ul>
+        
+        <h2 class="proposal-section-title">The site includes</h2>
+        
+        <div class="proposal-grid">
+            <div>
+                <h4 class="proposal-category">Design</h4>
+                <ul class="proposal-list">
+                    <li>Natural colors aligned with [BUSINESS_NAME]'s identity</li>
+                    <li>Works perfectly on phone and computer</li>
+                    <li>Photo gallery</li>
+                    <li>Spanish and English</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="proposal-category">Functionality</h4>
+                <ul class="proposal-list">
+                    <li>Direct WhatsApp button</li>
+                    <li>Professional email</li>
+                    <li>Contact form</li>
+                    <li>Full menu</li>
+                    <li>Hours and location</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="proposal-grid">
+            <div>
+                <h4 class="proposal-category">Visibility</h4>
+                <ul class="proposal-list">
+                    <li><strong>Domain: [DOMAIN]</strong></li>
+                    <li>📍 Google Maps registration</li>
+                    <li>Basic search engine optimization</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="proposal-category">Performance</h4>
+                <ul class="proposal-list">
+                    <li>Fast loading</li>
+                    <li>Optimized images</li>
+                    <li>Technical setup ready to use</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2 class="proposal-section-title">Proposal</h2>
+        
+        <p class="proposal-intro"><strong>$10,000 MXN</strong> - one-time payment</p>
+        <p class="proposal-intro">Includes design, development, and publishing the site.</p>
+        
+        <h2 class="proposal-section-title">Maintenance (optional)</h2>
+        
+        <div class="proposal-maintenance-box">
+            <p><strong>$800 MXN/month ($40 USD)</strong></p>
+            <p>Includes:</p>
+            <ul class="proposal-list">
+                <li>Site hosting</li>
+                <li>Annual domain renewal</li>
+                <li>Basic security</li>
+                <li>Small changes like menu, hours, text or photos</li>
+                <li>Technical support</li>
+            </ul>
+            <p class="proposal-note">The idea is that you don't have to worry about anything technical.</p>
+        </div>
+        
+        <h2 class="proposal-section-title">If you prefer no maintenance</h2>
+        
+        <p class="proposal-intro">No problem at all. I'll hand over the complete site and files for you to host wherever you prefer. Just keep in mind that the domain ([DOMAIN]) renews each year (~$280 MXN) and that would be on your side. Any future changes would be quoted separately.</p>
+        
+        <h2 class="proposal-section-title">Next steps</h2>
+        
+        <p class="proposal-intro">If you'd like to move forward with the website, just let me know and I'll send you the payment details and publish the site right away.</p>
+        
+        <p class="proposal-signature">Best,<br>Michael</p>
+        
+        <button onclick="closeProposalModal()" class="proposal-button">View the Website</button>
+    </div>
+</div>
+
+<!-- Proposal Modal CSS (add to your existing styles) -->
+<style>
+    .proposal-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .proposal-content {
+        background: var(--cream, #F5F0E6);
+        max-width: 700px;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2.5rem;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    .proposal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #6B5344;
+        line-height: 1;
+    }
+    
+    .proposal-close:hover {
+        color: #C4453A;
+    }
+    
+    .proposal-title {
+        color: #C4453A;
+        font-family: 'Lora', serif;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .proposal-intro {
+        font-size: 1rem;
+        color: #6B5344;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .proposal-section-title {
+        color: #2D7A7A;
+        font-size: 1.2rem;
+        border-bottom: 2px solid #A8D4D4;
+        padding-bottom: 0.5rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .proposal-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .proposal-category {
+        color: #4A3528;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .proposal-list {
+        font-size: 0.9rem;
+        color: #6B5344;
+        padding-left: 1.2rem;
+        line-height: 1.8;
+    }
+    
+    .proposal-maintenance-box {
+        background: #FDFBF7;
+        border-left: 3px solid #4A9B9B;
+        padding: 1.25rem;
+        border-radius: 0 8px 8px 0;
+        margin: 1rem 0;
+    }
+    
+    .proposal-maintenance-box p {
+        margin: 0 0 0.5rem 0;
+        color: #6B5344;
+    }
+    
+    .proposal-maintenance-box .proposal-list {
+        margin-top: 0.5rem;
+    }
+    
+    .proposal-note {
+        margin-top: 1rem !important;
+        font-style: italic;
+        color: #8B7355 !important;
+    }
+    
+    .proposal-signature {
+        margin-top: 2rem;
+        color: #6B5344;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .proposal-button {
+        background: #C4453A;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        font-family: 'Lora', serif;
+        transition: background 0.3s ease;
+    }
+    
+    .proposal-button:hover {
+        background: #A63829;
+    }
+    
+    @media (max-width: 600px) {
+        .proposal-content {
+            padding: 1.5rem;
+        }
+        
+        .proposal-title {
+            font-size: 1.5rem;
+        }
+        
+        .proposal-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+</style>
