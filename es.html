@@ -1773,12 +1773,23 @@
     </script>
     
     <!-- VAPI Voice/Chat Widget -->
-    <script
-      src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
-      data-public-key="cc2a754e-9ae6-4234-ac04-230fcce404a2"
-      data-assistant-id="cfd9e42b-e8e9-451b-baea-0774da8c2a38"
-      async
-    ></script>
+    <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+    <vapi-widget 
+      public-key="cc2a754e-9ae6-4234-ac04-230fcce404a2" 
+      assistant-id="cfd9e42b-e8e9-451b-baea-0774da8c2a38"
+      mode="chat"
+      theme="light"
+      size="full"
+      position="bottom-right"
+      accent-color="#8B4513"
+      cta-button-color="#8B4513"
+      cta-button-text-color="#FFFFFF"
+      title="Asistente del Café"
+      cta-title="Ordenar aquí"
+      cta-subtitle="Voz o texto"
+      chat-placeholder="¿En qué puedo ayudarte?"
+      chat-first-message="¡Hola! ¿Qué te preparo?"
+    ></vapi-widget>
 
 </body>
 </html>
